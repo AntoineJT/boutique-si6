@@ -7,7 +7,7 @@
     </head>
     <body>
         <?php include('./assets/internal/header.htm'); ?>
-        <?php// include('./assets/internal/index_content.php'); ?>
+        <?php // include('./assets/internal/index_content.php'); ?>
         <?php include('./assets/internal/footer.htm'); ?>
     </body>
 </html>
