@@ -8,6 +8,6 @@ class BDD_Caller {
     private static const USER = 'root';
     private static const PASS = '';
 
-    public static bdd = new BDD(SGBD,HOST,DATABASE,USER,PASS);
+    public static $bdd = new BDD(SGBD,HOST,DATABASE,USER,PASS);
 }
 ?>

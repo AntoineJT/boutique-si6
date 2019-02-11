@@ -1,1 +1,5 @@
 Options -Indexes
+RewriteEngine On
+# TODO Ne pas oublier de dégager l'extension des pages avant
+RewriteCond %{DOCUMENT_ROOT}/$1 !-f
+RewriteRule ^/?([a-z]+)$ /?action=$1 [PT]

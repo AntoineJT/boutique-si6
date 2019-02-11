@@ -6,8 +6,23 @@
         <link rel="stylesheet" type="text/css" href="./style/common.css">
     </head>
     <body>
-        <?php include('./assets/internal/header.htm'); ?>
-        <?php // include('./assets/internal/index_content.php'); ?>
-        <?php include('./assets/internal/footer.htm'); ?>
+        <?php
+            include('./assets/internal/header.htm');
+            
+            $action = isset($_GET['action']) ? $_GET['action'] : 'products';
+            const pages = array(
+                'products',
+                'login',
+                'register',
+                'news',
+                'contact'
+            );
+
+            if (in_array($action,pages,true)){
+                include('./assets/internal/'.$action.'_content.php');
+            }
+
+            include('./assets/internal/footer.htm');
+        ?>
     </body>
 </html>

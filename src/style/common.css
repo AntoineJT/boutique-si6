@@ -1,4 +1,10 @@
 
+body {
+    background-color:#FFFF80;
+    margin:0;
+    padding:0;
+}
+
 header h1, footer p {
     text-align:center;
 }
@@ -17,8 +23,37 @@ nav ul li {
     margin-left:5vw;
     margin-right:5vw;
 }
-/*
-fieldset input {
 
+fieldset {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    background-color:#333333;
+    border:none;
+    color:white;
+    margin-left:1vw;
+    margin-right:1vw;
 }
-*/
+
+fieldset legend {
+    background-color:white;
+    color:black;
+}
+fieldset label,fieldset input {
+    margin:1vh;
+}
+
+fieldset input[type=submit] {
+    color:white;
+    border:none;
+    background-color:#666666;
+    padding:0.5vh;
+}
+
+input[type=submit]:hover {
+    cursor:pointer;
+    /* TODO Ajouter une animation qui agrandit le bouton */
+    background-color:#333333;
+    color:#999999;
+    transition:1s ease-out;
+}

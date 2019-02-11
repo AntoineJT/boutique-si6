@@ -6,8 +6,10 @@
         <link rel="stylesheet" type="text/css" href="./style/common.css">
     </head>
     <body>
-        <?php include('./assets/internal/header.htm'); ?>
-        <?php //include('./assets/internal/register_content.htm'); ?>
-        <?php include('./assets/internal/footer.htm'); ?>
+        <?php
+            include('./assets/internal/header.htm');
+            //include('./assets/internal/register_content.htm');
+            include('./assets/internal/footer.htm'); 
+        ?>
     </body>
 </html>
