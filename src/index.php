@@ -18,8 +18,10 @@
                 'contact'
             );
 
-            if (in_array($action,pages,true)){
+            if (in_array($action, pages, true)){
                 include('./assets/internal/' . $action . '_content.php');
+            } else {
+                // TODO Include some error page : 404 not found or thing alike!
             }
 
             include('./assets/internal/footer.htm');
