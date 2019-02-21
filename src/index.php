@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
     <head>
         <title>Un site qui vend des choses</title>
         <meta charset='utf-8'>
@@ -19,7 +19,7 @@
             );
 
             if (in_array($action,pages,true)){
-                include('./assets/internal/'.$action.'_content.php');
+                include('./assets/internal/' . $action . '_content.php');
             }
 
             include('./assets/internal/footer.htm');
