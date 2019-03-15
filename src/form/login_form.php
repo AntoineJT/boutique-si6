@@ -1,5 +1,5 @@
 <?php
-    //include_once('../php/bdd.php');
+    include_once('../php/bdd.php');
 
     function kill(){
         echo 'Erreur! Vous avez oublié de renseigner le pseudo et/ou le mot de passe!';
