@@ -1,2 +1,5 @@
 # Ignore useless folder
-useless_/
+useless/
+
+# Ignore MCD backup
+*.bak

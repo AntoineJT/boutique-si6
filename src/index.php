@@ -3,6 +3,7 @@
     <head>
         <title>Un site qui vend des choses</title>
         <meta charset="utf-8">
+        <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">-->
         <link rel="stylesheet" type="text/css" href="./style/common.css">
     </head>
     <body>
