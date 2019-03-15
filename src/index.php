@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <title>Un site qui vend des choses</title>
-        <meta charset='utf-8'>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="./style/common.css">
     </head>
     <body>
