@@ -72,14 +72,21 @@ fieldset label,fieldset input {
 fieldset input[type=submit] {
     color:white;
     border:none;
-    background-color:#666666;
-    padding:0.5vh;
+    background-color:initial;
+    margin:auto;
+    padding:0.5vh 1vw;
+    font-size:1em;
 }
 
-input[type=submit]:hover {
+footer {
+    border-top:solid 1px #333333;
+    padding:2vh 1vw;
+    background:linear-gradient(#333333,#222222);
+}
+
+input[type=submit]:hover, footer nav a:hover {
     cursor:pointer;
-    /* TODO Ajouter une animation qui agrandit le bouton */
     background-color:#333333;
     color:#999999;
-    transition:1s ease-out;
+    transition:250ms ease-out;
 }
