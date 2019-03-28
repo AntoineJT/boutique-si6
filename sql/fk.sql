@@ -1,3 +1,6 @@
+-- Boutique SI6 SQL Script
+-- fk.sql
+-- This script add Foreign Keys to some tables
 
 ALTER TABLE COMMANDE ADD
     CONSTRAINT FK_COM_Cli

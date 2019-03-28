@@ -1,7 +1,10 @@
+-- Boutique SI6 SQL Script
+-- create.sql
+-- This script creates database and tables
+
 DROP DATABASE IF EXISTS BOUTIQUE;
 CREATE DATABASE BOUTIQUE;
 USE BOUTIQUE
--- TODO Finish that
 
 CREATE TABLE CLIENT(
    CodeCli VARCHAR(20),
