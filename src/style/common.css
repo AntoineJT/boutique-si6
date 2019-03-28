@@ -1,13 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
     /*background-color:#FFFF80;*/
     background-color:#eeeeee;
     margin:0;
     padding:0;
     background-color:#333333;
+    font-family: Roboto;
 }
 
-header h1, footer nav {
+header h1, footer nav, p {
     text-align:center;
     color:white;
 }

@@ -17,7 +17,7 @@
     </head>
     <body>
         <?php
-            include("./assets/internal/header.htm");
+            include("./assets/internal/header.php");
 
             const pages = array(
                 "products",
@@ -33,10 +33,6 @@
                 include($file);
             } else {
                 // TODO Include some error page : 404 not found or thing alike!
-            }
-
-            if (isset($_SESSION["pseudo"])){
-                ?><input type="button" value="Se déconnecter" onclick="window.location = '/?action=disconnect'"><?php
             }
             
             include("./assets/internal/footer.htm");
