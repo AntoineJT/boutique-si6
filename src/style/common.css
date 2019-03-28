@@ -86,7 +86,6 @@ footer {
 
 input[type=submit]:hover, footer nav a:hover {
     cursor:pointer;
-    background-color:#333333;
     color:#999999;
     transition:250ms ease-out;
 }
