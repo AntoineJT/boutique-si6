@@ -28,7 +28,9 @@
             );
 
             if (in_array($action, pages, true)){
-                include("./assets/internal/" . $action . "_content.php");
+                $file = "./assets/internal/" . $action . "_content";
+                $file = (file_exists($file . ".htm")) ? $file.".htm" : $file.".php";
+                include($file);
             } else {
                 // TODO Include some error page : 404 not found or thing alike!
             }
@@ -37,6 +39,7 @@
                 // TODO Finir ça
                 ?><input type="button" value="Se déconnecter" onclick="window.location = '/?action=disconnect'"><?php
             }
+            
             include("./assets/internal/footer.htm");
         ?>
     </body>
