@@ -77,12 +77,16 @@ fieldset input[type=submit] {
 
 footer {
     border-top:solid 1px #333333;
-    padding:2vh 1vw;
+    padding:1vh 1vw;
     background:linear-gradient(#333333,#222222);
 }
 
-input[type=submit]:hover, footer nav a:hover {
+footer p a {
+    color:#ffff80;
+}
+
+input[type=submit]:hover, footer p a:hover {
     cursor:pointer;
-    color:#999999;
+    color:#b3ffb3;
     transition:250ms ease-out;
 }
