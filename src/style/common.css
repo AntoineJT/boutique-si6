@@ -1,6 +1,7 @@
 
 body {
-    background-color:#FFFF80;
+    /*background-color:#FFFF80;*/
+    background-color:#eeeeee;
     margin:0;
     padding:0;
 }
@@ -36,7 +37,9 @@ fieldset {
 }
 
 fieldset legend {
-    background-color:white;
+    background-color:#eeeeff;
+    border-width:1px;
+    border-color:black;
     color:black;
 }
 fieldset label,fieldset input {
