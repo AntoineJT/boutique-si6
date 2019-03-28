@@ -5,7 +5,7 @@ USE BOUTIQUE
 
 CREATE TABLE CLIENT(
    CodeCli VARCHAR(20),
-   Mdp VARCHAR(50),
+   Mdp VARCHAR(255),
    NomCli VARCHAR(50),
    PnomCli VARCHAR(50),
    NaissCli DATE,

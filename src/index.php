@@ -1,7 +1,7 @@
 <?php 
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "products";
-    if ($action == "disconnect"){
+    if ($action === "disconnect"){
         $_SESSION = array();
         header("Location: /");
         die();
@@ -36,7 +36,6 @@
             }
 
             if (isset($_SESSION["pseudo"])){
-                // TODO Finir ça
                 ?><input type="button" value="Se déconnecter" onclick="window.location = '/?action=disconnect'"><?php
             }
             

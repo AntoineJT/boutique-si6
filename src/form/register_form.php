@@ -7,7 +7,7 @@
         if (!isset($_POST[$var]) || empty($_POST[$var])) {
             die("Erreur! Vous avez oublié de renseigner des champs requis!");
         }
-        $$var = $_POST[$var];
+        ${$var} = $_POST[$var];
     }
     
     if ($pass !== $pass2){

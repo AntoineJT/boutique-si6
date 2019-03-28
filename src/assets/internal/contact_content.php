@@ -1,3 +1,1 @@
-<?php
-
-?>
+<p>Afin de nous contacter, vous pouvez envoyer un e-mail </p>
