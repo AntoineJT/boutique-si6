@@ -85,6 +85,15 @@ footer p a {
     color:#ffff80;
 }
 
+p a {
+    color:#b3ffb3;
+}
+
+p a:hover {
+    color:#ffff80;
+    transition:250ms ease-out;
+}
+
 input[type=submit]:hover, footer p a:hover {
     cursor:pointer;
     color:#b3ffb3;

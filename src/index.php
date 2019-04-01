@@ -10,7 +10,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <title>Shoot2BeSoft</title>
+        <title>Le site du moins un</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="/style/common.css">
     </head>

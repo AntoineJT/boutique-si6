@@ -1,5 +1,5 @@
 <header>
-    <h1>Shoot 2 Be Soft</h1>
+    <h1>Le Site du Moins Un</h1>
 </header>
 <nav>
     <ul>
