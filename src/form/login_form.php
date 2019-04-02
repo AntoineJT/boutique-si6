@@ -6,8 +6,18 @@
         die("Erreur! Vous avez oublié de renseigner le pseudo et/ou le mot de passe!");
     }
 
-    $user = isset($_POST["user"]) ? $_POST["user"] : invalid_args();
-    $pass = isset($_POST["pass"]) ? $_POST["pass"] : invalid_args();
+    const required = array("user", "pass");
+    foreach(required as $var){
+        if (!isset($_POST[$var]) || empty($_POST[$var])) {
+            echo "Erreur! Vous avez oublié de renseigner des champs requis!";
+            ?>
+                <br><a href="/login">S'enregistrer</a>
+                <script>setTimeout(`location.href = '/login'`,4000)</script>
+            <?php
+            die();
+        }
+        ${$var} = $_POST[$var];
+    }
 
     $req = $bdd->prepare("SELECT CodeCli, Mdp FROM CLIENT WHERE CodeCli = ?");
     $req->execute(array($user));
