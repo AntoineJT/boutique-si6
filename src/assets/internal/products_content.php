@@ -17,6 +17,7 @@
     $cat = (isset($_POST["categ"]) && !empty($_POST["categ"])) ? $_POST["categ"] : die(); // Si la catégorie n'est pas définie, on arrête le script
     $req = $bdd->prepare("SELECT * FROM ARTICLE WHERE CodeCat = ?");
     $req->setFetchMode(PDO::FETCH_BOTH); // for debug reasons both for now
+    $req->execute(array($cat));
     foreach($req->fetchAll() as $val){
         // TODO Faire mise en forme des articles, etc.
     }
