@@ -31,8 +31,9 @@
     } else {
         $resp = $req->fetch(PDO::FETCH_ASSOC);
         if (password_verify($pass, $resp["Mdp"])){
-            echo "Vous êtes connecté!";
             $_SESSION["pseudo"] = $user;
+            $_SESSION["products"] = array();
+            echo "Vous êtes connecté!";
             ?>
                 <br><a href="/index">Retour à la racine du site</a>
                 <script>setTimeout(`location.href = '/index'`,4000)</script>

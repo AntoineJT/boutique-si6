@@ -28,8 +28,7 @@
         ":mail" => $mail
     ));
 
-    $_SESSION["pseudo"] = $nick;
-    echo "Vous êtes maintenant inscrit et connecté!";
+    echo "Vous êtes maintenant inscrit!";
     ?>
         <br><a href="/index">Retour à la racine du site</a>
         <script>setTimeout(`location.href = '/index'`,4000)</script>

@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+:root {
+    --body-bg-color:#333333;
+    --main-bg-color:#222222;
+    --text-color:white;
+}
+
 body {
-    background-color:#eeeeee;
     margin:0;
     padding:0;
-    background-color:#333333;
-    font-family: Roboto;
+    background-color:var(--body-bg-color);
+    font-family:Roboto;
 }
 
 header h1, footer nav, p {
     text-align:center;
-    color:white;
+    color:var(--text-color);
 }
 
 header {
-    border-bottom: solid black 1px;
-    background:linear-gradient(#333333,black);
+    border-bottom:solid black 1px;
+    background:linear-gradient(var(--body-bg-color),black);
 }
 
 a {
@@ -25,7 +30,7 @@ a {
 nav {
     display:flex;
     justify-content:center;
-    color:white;
+    color:var(--text-color);
 }
 
 nav ul {
@@ -36,7 +41,7 @@ nav ul li {
     display:flex;
     margin-left:1vw;
     margin-right:1vw;
-    border-bottom: solid #222222 2px;
+    border-bottom:solid var(--main-bg-color) 2px;
     padding:1vh 0.5vw;
 }
 
@@ -45,13 +50,52 @@ nav ul li:hover {
     transition:250ms;
 }
 
+.product {
+    background-color:#eeeeff;
+    display:inline-block;
+    margin:2vh 2vw;
+    padding:2vh 2vw;
+}
+
+.product img {
+    display:flex;
+    height:60vh;
+    margin:auto;
+}
+
+.product p {
+    color:inherit;
+}
+
+.product form {
+    display:inline-flex;
+    justify-content:right;
+}
+
+.product input[type=submit] {
+    background-color:#ff5555;
+    color:var(--text-color);
+    padding:0.25vh 0.25vw;
+    border-radius:15px;
+    margin-left:2vw;
+    padding:1vh 1vw;
+    font-size:0.85em;
+    transition:500ms ease-out;
+}
+
+.product input[type=submit]:hover {
+    cursor:pointer;
+    transform:scale(1.05);
+    color:var(--text-color);
+}
+
 fieldset {
     display:flex;
     flex-direction: column;
     text-align: left;
-    background-color:#333333;
+    background-color:var(--body-bg-color);
     border:none;
-    color:white;
+    color:var(--text-color);
     margin-left:1vw;
     margin-right:1vw;
 }
@@ -62,12 +106,13 @@ fieldset legend {
     border-color:black;
     color:black;
 }
+
 fieldset label,fieldset input {
     margin:1vh;
 }
 
 fieldset input[type=submit] {
-    color:white;
+    color:var(--text-color);
     border:none;
     background-color:initial;
     margin:auto;
@@ -76,9 +121,9 @@ fieldset input[type=submit] {
 }
 
 footer {
-    border-top:solid 1px #333333;
+    border-top:solid 1px var(--body-bg-color);
     padding:1vh 1vw;
-    background:linear-gradient(#333333,#222222);
+    background:linear-gradient(var(--body-bg-color),var(--main-bg-color));
 }
 
 footer p a {
@@ -98,4 +143,12 @@ input[type=submit]:hover, footer p a:hover {
     cursor:pointer;
     color:#b3ffb3;
     transition:250ms ease-out;
+}
+
+.italic {
+    font-style:italic;
+}
+
+.bold {
+    font-weight:bold;
 }

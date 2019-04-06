@@ -5,6 +5,19 @@
         $_SESSION = array();
         header("Location: /");
         die();
+    } else
+    if ($action === "addprod"){
+        $prod = isset($_POST["codeprod"]) ? $_POST["codeprod"] : null;
+        $qte = isset($_POST["qte"]) ? $_POST["qte"] : null;
+        $qte = is_numeric($_POST["qte"]) ? $qte : null;
+
+        if (!is_null($prod) && !is_null($qte)){
+            if (!isset($_SESSION["products"][$prod])){
+                $_SESSION["products"][$prod] = 0;
+            }
+            $_SESSION["products"][$prod] += $qte;
+        }
+        echo var_dump($_SESSION["products"]); // debug thing
     }
 ?>
 <!DOCTYPE HTML>
