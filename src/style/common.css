@@ -158,6 +158,10 @@ input[type=submit]:hover, footer p a:hover {
     font-weight:bold;
 }
 
+.underlined {
+    text-decoration:underline;
+}
+
 aside {
     display:flex;
     position:sticky;
@@ -165,6 +169,8 @@ aside {
     flex-direction:column;
     background-color:var(--text-color);
     padding:1vh 2vw;
+    border:solid 1px black;
+    max-width:12.5vw;
 }
 
 aside h2 {
@@ -174,6 +180,10 @@ aside h2 {
 aside ul {
     margin:1vh 1vw;
     padding:0;
+}
+
+aside p {
+    color:inherit;
 }
 
 aside a {

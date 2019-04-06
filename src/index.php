@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include_once("php/bdd.php");
     session_start();
     if (!isset($_SESSION["products"])){
         $_SESSION["products"] = array();
@@ -44,11 +45,20 @@
             <ul>
                 <?php
                     // TODO Ajouter les prix + cumul
+                    $total_fac = 0;
                     foreach($_SESSION["products"] as $key => $val){
-                        echo "<li>" . $key . " x " . $val . "</li>";
+                        $req = $bdd->prepare("SELECT NomArt, PrixArt FROM ARTICLE WHERE CodeArt = ?");
+                        $req->setFetchMode(PDO::FETCH_ASSOC);
+                        $req->execute(array($key));
+                        $results = $req->fetch();
+                        $price = $results["PrixArt"];
+                        $total = $val*$price;
+                        echo "<li><span class='underlined'>" . $results["NomArt"] . "</span> (" . $price . "€) x " . $val . " = " . $total . "€</li>";
+                        $total_fac += $total;
                     }
                 ?>
             </ul>
+            <p class="bold">Total : <?php echo $total_fac . "€"; ?></p>
             <a href="#">Acheter</a>
             <a href="/?action=clear">Vider</a>
         </aside>
