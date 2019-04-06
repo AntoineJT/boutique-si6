@@ -64,8 +64,9 @@ nav ul li:hover {
 
 .product img {
     display:flex;
-    height:60vh;
+    max-height:60vh;
     margin:auto;
+    max-width:25vw;
 }
 
 .product p {

@@ -2,8 +2,13 @@
 -- create.sql
 -- Ce script crée la bdd et ses tables
 
+SET character_set_server = 'utf8';
+CHARSET utf8
+
 DROP DATABASE IF EXISTS BOUTIQUE;
-CREATE DATABASE BOUTIQUE;
+CREATE DATABASE BOUTIQUE
+   DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
 USE BOUTIQUE
 
 CREATE TABLE CLIENT(
