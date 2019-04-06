@@ -21,6 +21,7 @@
             }
             $_SESSION["products"][$prod] += $qte;
         }
+        header('Location: /products');
     }
 
     switch($action){

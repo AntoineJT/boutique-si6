@@ -1,6 +1,4 @@
-<?php
-    include_once("php/bdd.php");
-?>
+<?php include_once("php/bdd.php"); ?>
 <form action="/products" method="POST">
     <select name="categ">
         <?php

@@ -55,6 +55,11 @@ nav ul li:hover {
     display:inline-block;
     margin:2vh 2vw;
     padding:2vh 2vw;
+    max-width:25vw;
+}
+
+.product h2 {
+    text-align:center;
 }
 
 .product img {
