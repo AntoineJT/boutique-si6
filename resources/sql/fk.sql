@@ -1,13 +1,13 @@
 -- Boutique SI6 SQL Script
 -- fk.sql
--- This script add Foreign Keys to some tables
+-- Ce script ajoute les clés étrangères aux différentes tables
 
 ALTER TABLE COMMANDE ADD
     CONSTRAINT FK_COM_Cli
     FOREIGN KEY(CodeCli)
     REFERENCES CLIENT(CodeCli);
 
-ALTER TABLE HISTORIQUE_PRIX ADD
+ALTER TABLE HISTORISER ADD
     CONSTRAINT FK_HP_Art
     FOREIGN KEY(CodeArt)
     REFERENCES ARTICLE(CodeArt);

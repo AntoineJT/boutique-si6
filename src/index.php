@@ -1,12 +1,13 @@
 <?php 
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "products";
-    if ($action === "disconnect"){
+
+    function swi_disconnect(){
         $_SESSION = array();
         header("Location: /");
         die();
-    } else
-    if ($action === "addprod"){
+    }
+    function swi_addprod(){
         $prod = isset($_POST["codeprod"]) ? $_POST["codeprod"] : null;
         $qte = isset($_POST["qte"]) ? $_POST["qte"] : null;
         $qte = is_numeric($_POST["qte"]) ? $qte : null;
@@ -17,7 +18,12 @@
             }
             $_SESSION["products"][$prod] += $qte;
         }
-        echo var_dump($_SESSION["products"]); // debug thing
+    }
+
+    switch($action){
+        case "disconnect": swi_disconnect(); break;
+        case "addprod": swi_addprod(); break;
+        case "clear": $_SESSION["products"] = array(); break;
     }
 ?>
 <!DOCTYPE HTML>
@@ -28,9 +34,21 @@
         <link rel="stylesheet" type="text/css" href="/style/common.css">
     </head>
     <body>
+        <?php include("./assets/internal/header.php"); ?>
+        <aside>
+            <h2>Votre Panier</h2>
+            <ul>
+                <?php
+                    // TODO Ajouter les prix + cumul
+                    foreach($_SESSION["products"] as $key => $val){
+                        echo "<li>" . $key . " x " . $val . "</li>";
+                    }
+                ?>
+            </ul>
+            <a href="#">Acheter</a>
+            <a href="/?action=clear">Vider</a>
+        </aside>
         <?php
-            include("./assets/internal/header.php");
-
             const pages = array(
                 "products",
                 "login",

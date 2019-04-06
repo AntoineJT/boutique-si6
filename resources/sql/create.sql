@@ -1,6 +1,6 @@
 -- Boutique SI6 SQL Script
 -- create.sql
--- This script creates database and tables
+-- Ce script crée la bdd et ses tables
 
 DROP DATABASE IF EXISTS BOUTIQUE;
 CREATE DATABASE BOUTIQUE;
@@ -35,16 +35,17 @@ CREATE TABLE CATEGORIE(
    PRIMARY KEY(CodeCat)
 ) ENGINE=InnoDB;
 
-CREATE TABLE HISTORIQUE_PRIX(
+CREATE TABLE HISTORISER(
    CodeArt CHAR(3),
    DateChg DATE,
    AncienPrix DECIMAL(4,2),
    CONSTRAINT PK_HP
    PRIMARY KEY(CodeArt, DateChg)
-);
+) ENGINE=InnoDB;
 
 CREATE TABLE ARTICLE(
    CodeArt CHAR(3),
+   NomArt VARCHAR(50),
    ImgArt VARCHAR(50),
    DescArt VARCHAR(30),
    PrixArt DECIMAL(4,2),

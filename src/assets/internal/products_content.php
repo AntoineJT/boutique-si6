@@ -42,7 +42,7 @@
     <img src="/assets/images/le_guide_des_bad_practices.png" alt="Le guide des mauvaises pratiques">
     <p class="italic">Description de test</p>
     <p><span class="bold">Prix:</span> 20€</p>
-    <form method="POST" action="/?action=addprod"> <?php // Add some action form ?>
+    <form method="POST" action="/?action=addprod">
         <input type="hidden" name="codeprod" value="gbd"> <!-- Mauvaise forme de CodeProd -->
         <input type="number" name="qte" value="1">
         <input type="submit" value="Ajouter au panier">

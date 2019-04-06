@@ -152,3 +152,27 @@ input[type=submit]:hover, footer p a:hover {
 .bold {
     font-weight:bold;
 }
+
+aside {
+    display:flex;
+    position:sticky;
+    float:right;
+    flex-direction:column;
+    background-color:var(--text-color);
+    padding:1vh 2vw;
+}
+
+aside h2 {
+    margin:0;
+}
+
+aside ul {
+    margin:1vh 1vw;
+    padding:0;
+}
+
+aside a {
+    display:flex;
+    justify-content:center;
+    border:solid 1px;
+}
