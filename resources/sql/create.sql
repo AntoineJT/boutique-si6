@@ -47,7 +47,7 @@ CREATE TABLE ARTICLE(
    CodeArt CHAR(3),
    NomArt VARCHAR(50),
    ImgArt VARCHAR(50),
-   DescArt VARCHAR(30),
+   DescArt VARCHAR(255),
    PrixArt DECIMAL(4,2),
    CodeCat TINYINT,
    CONSTRAINT PK_ART

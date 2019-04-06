@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    if (!isset($_SESSION["products"])){
+        $_SESSION["products"] = array();
+    }
     $action = isset($_GET["action"]) ? $_GET["action"] : "products";
 
     function swi_disconnect(){
