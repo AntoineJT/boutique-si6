@@ -1,5 +1,5 @@
 <?php
-    // include_once("php/bdd.php");
+    include_once("php/bdd.php");
 ?>
 <form action="/products" method="POST">
     <select name="categ">
@@ -24,15 +24,15 @@
         $img = $val["ImgArt"];
         $desc = $val["DescArt"];
         $price = $val["PrixArt"];
-        $code = $val["CodeProd"];
+        $code = $val["CodeArt"];
         ?>
         <section class="product">
             <h2><?php echo $name; ?></h2>
-            <?php echo '<img src="/assets/images/$img" alt="$name">'; ?>
+            <?php echo '<img src="/assets/images/' . $img . '" alt="' . $name . '">'; ?>
             <p class="italic"><?php echo $desc; ?></p>
             <p><span class="bold">Prix: </span><?php echo $price; ?>€</p>
             <form method="POST" action="/?action=addprod">
-                <?php echo '<input type="hidden" name="codeprod" value="$code">'; ?>
+                <?php echo '<input type="hidden" name="codeprod" value="' . $code . '">'; ?>
                 <input type="number" name="qte" value="1">
                 <input type="submit" value="Ajouter au panier">
             </form>
