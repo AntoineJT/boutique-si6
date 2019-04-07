@@ -2,7 +2,8 @@
 -- insert.sql
 -- Ce script insère les données de base du site dans la bdd
 
--- CLIENT (USER ACCOUNT)
+-- CLIENTS
+-- COMPTE ADMIN
 INSERT INTO CLIENT VALUES(1, 1, "root", "$2y$10$ydsJQS3H/V2iTbm2RiCeIewxqPKaKMoc7QT7TfmM3mx7Z4wqonjwe", "root", "root", "1970-01-01", "root", "00000", "SuperUser City", "root@root.su"); -- PASSWORD is "root"
 
 -- CATEGORIES

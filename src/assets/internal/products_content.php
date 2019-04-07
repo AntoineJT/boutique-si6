@@ -30,7 +30,7 @@
                 <?php echo '<img src="/assets/images/' . $img . '" alt="' . $name . '">'; ?>
                 <p class="italic"><?php echo $desc; ?></p>
                 <p><span class="bold">Prix: </span><?php echo $price; ?>€</p>
-                <form method="POST" action="/?action=addprod">
+                <form method="POST" action="/addprod">
                     <?php echo '<input type="hidden" name="codeprod" value="' . $code . '">'; ?>
                     <input type="number" name="qte" value="1">
                     <input type="submit" value="Ajouter au panier">

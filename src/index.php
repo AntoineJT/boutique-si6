@@ -55,11 +55,12 @@
                         echo "<li><span class='underlined'>" . $results["NomArt"] . "</span> (" . $price . "€) x " . $val . " = " . $total . "€</li>";
                         $total_fac += $total;
                     }
+                    $_SESSION["total"] = $total_fac;
                 ?>
             </ul>
             <p class="bold">Total : <?php echo $total_fac . "€"; ?></p>
             <a href="/buy">Acheter</a>
-            <a href="/?action=clear">Vider</a>
+            <a href="/clear">Vider</a>
         </aside>
         <?php
             const pages = array(
@@ -67,7 +68,8 @@
                 "login",
                 "register",
                 "news",
-                "contact"
+                "contact",
+                "buy"
             );
 
             if (in_array($action, pages, true)){
