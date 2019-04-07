@@ -10,6 +10,9 @@
                 ?><li><a href="/login">Se connecter</a></li><?php
             } else {
                 ?><li><a href="/?action=disconnect">Se déconnecter</a></li><?php
+                if ($_SESSION["b_admin"]){
+                    ?><li><a href="#">Panel Admin</a></li><?php
+                }
             }
         ?>
         <li><a href="/contact">Nous contacter</a></li>

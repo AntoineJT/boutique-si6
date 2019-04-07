@@ -19,7 +19,7 @@
         ${$var} = $_POST[$var];
     }
 
-    $req = $bdd->prepare("SELECT IdCli, Mdp FROM CLIENT WHERE PseudoCli = ?");
+    $req = $bdd->prepare("SELECT IdCli, TypeCli, Mdp FROM CLIENT WHERE PseudoCli = ?");
     $req->execute(array($user));
 
     if ($req->rowCount() === 0){
@@ -32,6 +32,7 @@
         $resp = $req->fetch(PDO::FETCH_ASSOC);
         if (password_verify($pass, $resp["Mdp"])){
             $_SESSION["id"] = $resp["IdCli"];
+            $_SESSION["b_admin"] = ($resp["TypeCli"] === 0) ? false : true;
             $_SESSION["pseudo"] = $user;
             ?>
                 <p>Vous êtes connecté!</p>
