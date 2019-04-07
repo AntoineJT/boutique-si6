@@ -1,6 +1,6 @@
 <?php
-    include_once("php/bdd.php");
-    include_once("php/comm_util.php");
+    include_once("../php/bdd.php");
+    include_once("../php/comm_util.php");
     session_start();
 
     if (isset($_SESSION["id"])){
@@ -9,9 +9,10 @@
             $req = $bdd->prepare("INSERT INTO COMMANDE VALUES(?, ?, ?, ?)");
             $req->execute(array($codecomm, gmdate('Y-m-d'), $_SESSION["total"], $_SESSION["id"]));
             foreach($_SESSION["products"] as $prod => $qte){
-                $req->prepapre("INSERT INTO ACHETER VALUES(?, ?, ?)");
+                $req = $bdd->prepare("INSERT INTO ACHETER VALUES(?, ?, ?)");
                 $req->execute(array($prod, $codecomm, $qte));
             }
+            echo "La commande N°" . $codecomm . " a bien été enregistrée!";
         } else {
             ?>
                 <p>Votre panier est vide!</p>
