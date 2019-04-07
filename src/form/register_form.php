@@ -15,7 +15,16 @@
     }
     $pass = password_hash($pass, PASSWORD_BCRYPT);
     
-    $req = $bdd->prepare("INSERT INTO CLIENT VALUES(:nick, :pass, :name, :fname, :birth, :adr, :cp, :city, :mail)");
+    $req = $bdd->prepare("SELECT IdCli FROM CLIENT WHERE PseudoCli = ?");
+    $req->execute(array($nick));
+    if ($req->rowCount() !== 0){
+        die("Ce pseudo est déjà utilisé!");
+    }
+    $req->closeCursor();
+
+    $req = $bdd->prepare("INSERT INTO
+            CLIENT(TypeCli, PseudoCli, Mdp, NomCli, PnomCli, NaissCli, AdrCli, CPCli, VilleCli, MailCli)
+            VALUES(0, :nick, :pass, :name, :fname, :birth, :adr, :cp, :city, :mail)");
     $req->execute(array(
         ":nick" => $nick,
         ":pass" => $pass,

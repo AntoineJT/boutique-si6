@@ -39,12 +39,11 @@
         <link rel="stylesheet" type="text/css" href="/style/common.css">
     </head>
     <body>
-        <?php include("./assets/internal/header.php"); ?>
+        <?php include_once("./assets/internal/header.php"); ?>
         <aside>
             <h2>Votre Panier</h2>
             <ul>
                 <?php
-                    // TODO Ajouter les prix + cumul
                     $total_fac = 0;
                     foreach($_SESSION["products"] as $key => $val){
                         $req = $bdd->prepare("SELECT NomArt, PrixArt FROM ARTICLE WHERE CodeArt = ?");
@@ -59,7 +58,7 @@
                 ?>
             </ul>
             <p class="bold">Total : <?php echo $total_fac . "€"; ?></p>
-            <a href="#">Acheter</a>
+            <a href="/buy">Acheter</a>
             <a href="/?action=clear">Vider</a>
         </aside>
         <?php
@@ -73,13 +72,11 @@
 
             if (in_array($action, pages, true)){
                 $file = "./assets/internal/" . $action . "_content";
-                $file = (file_exists($file . ".htm")) ? $file.".htm" : $file.".php";
-                include($file);
-            } else {
-                // TODO Include some error page : 404 not found or thing alike!
+                $file = (file_exists($file . ".htm")) ? $file . ".htm" : $file . ".php";
+                include_once($file);
             }
             
-            include("./assets/internal/footer.htm");
+            include_once("./assets/internal/footer.htm");
         ?>
     </body>
 </html>
