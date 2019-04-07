@@ -12,7 +12,9 @@
                 $req = $bdd->prepare("INSERT INTO ACHETER VALUES(?, ?, ?)");
                 $req->execute(array($prod, $codecomm, $qte));
             }
+            $_SESSION["products"] = array();
             echo "La commande N°" . $codecomm . " a bien été enregistrée!";
+            // TODO 
         } else {
             ?>
                 <p>Votre panier est vide!</p>
