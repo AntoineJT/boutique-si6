@@ -32,7 +32,7 @@
         $resp = $req->fetch(PDO::FETCH_ASSOC);
         if (password_verify($pass, $resp["Mdp"])){
             $_SESSION["id"] = $resp["IdCli"];
-            $_SESSION["b_admin"] = ($resp["TypeCli"] === 0) ? false : true;
+            $_SESSION["b_admin"] = $resp["TypeCli"] == 0 ? false : true; // le transtypage est nécessaire ici!
             $_SESSION["pseudo"] = $user;
             ?>
                 <p>Vous êtes connecté!</p>

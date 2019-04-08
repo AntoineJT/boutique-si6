@@ -242,3 +242,21 @@ aside a {
 .button:hover {
     transform:scale(1.10);
 }
+
+button {
+    display:table;
+    margin:auto;
+    margin-top:2vh;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+select {
+    background-color:var(--main-bg-color);
+    color:var(--text-color);
+    text-shadow:1px 1px black;
+    border-color:green;
+    margin-left:2vw;
+}
