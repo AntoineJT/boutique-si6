@@ -18,3 +18,6 @@ INSERT INTO ARTICLE VALUES("RSE", "Rentabiliser ses enfants", "rentabiliser_ses_
 
 -- CATEGORIE : PROGRAMMATION
 INSERT INTO ARTICLE VALUES("GBP", "Le guide des « bad practices »", "le_guide_des_bad_practices.png", "Manuel pour mal programmer, par OpenClassRooms", 19.99, 2);
+
+-- CATEGORIE : AUTRES
+INSERT INTO ARTICLE VALUES("DJV", "Augmentez la durée de vie de votre jeu vidéo", "augmentez_la_duree_de_vie_de_votre_jeu_video.png", "« Et cette souffrance des jeux à licence, vous vous en souviendrez pour toujours (...) », JdG", 66.60, 3);
