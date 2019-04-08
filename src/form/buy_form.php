@@ -26,7 +26,7 @@
                 <script src="/scripts/html2pdf.bundle.min.js"></script>
             </head>
             <?php
-            echo "<p>La commande N°" . $codeComm . " a bien été enregistrée!</p>";
+            echo "<p>La commande N°" . $codeComm . " a bien été enregistrée! <a href='/'>Retour à l'index</a></p>";
             printBill($bdd, $codeComm, $_SESSION["id"]);
             ?>
                 <button onclick="html2pdf(document.getElementById('bill'))">Télécharger le pdf</button>
