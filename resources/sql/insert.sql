@@ -22,3 +22,4 @@ INSERT INTO ARTICLE VALUES("GBP", "Le guide des « bad practices »", "le_guide_
 
 -- CATEGORIE : AUTRES
 INSERT INTO ARTICLE VALUES("DJV", "Augmentez la durée de vie de votre jeu vidéo", "augmentez_la_duree_de_vie_de_votre_jeu_video.png", "« Et cette souffrance des jeux à licence, vous vous en souviendrez pour toujours (...) », JdG", 66.60, 3);
+INSERT INTO ARTICLE VALUES("OCT", "Dessiner un octogone sans règle", "dessiner_un_octogone_sans_regle.png", "Le livre qui vous apprendra à vous battre dans les cours de récréation et à dessiner un octogone sans règle, par Booba & Kaaris", 57.50, 3);
