@@ -23,6 +23,7 @@ function printBill($bdd, $commId, $clientId, $products=null){
     $clientAddr = $cli_infos["AdrCli"];
     $clientCP = $cli_infos["CPCli"];
     $clientCity = $cli_infos["VilleCli"];
+    $clientMail = $cli_infos["MailCli"];
 
     if (is_null($commId)){ // Preview
         if (is_null($products)){
@@ -89,6 +90,7 @@ function printBill($bdd, $commId, $clientId, $products=null){
                     Identifiant : ' . $clientId . '<br>
                     Pseudo : ' . $clientNick . '<br>
                     Patronyme : ' . strtoupper($clientName) . ' ' . ucfirst($clientFName) . '<br>
+                    Courriel : ' . $clientMail . '<br>
                     <details open>
                         <summary>Adresse</summary>' . 
                         $clientAddr . '<br>' .
