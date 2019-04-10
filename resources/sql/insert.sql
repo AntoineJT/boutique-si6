@@ -22,6 +22,7 @@ INSERT INTO ARTICLE VALUES("GDP", "Le guide du plagiarisme", "le_guide_du_plagia
 INSERT INTO ARTICLE VALUES("GBP", "Le guide des « bad practices »", "le_guide_des_bad_practices.png", "Manuel pour mal programmer, par OpenClassRooms", 19.99, 2);
 INSERT INTO ARTICLE VALUES("JQY", "Concevoir votre site avec jQuery", "concevoir_votre_site_avec_jquery.png", "Abandonnez le JS Vanilla pour inclure une lib lourde et peu nécessaire, par OpenClassRooms", 24.99, 2);
 INSERT INTO ARTICLE VALUES("API", "Développez une API REST pour votre site", "developpez_une_api_rest_pour_votre_site.png", "Achetez le livre pour plus d'infos ;), par OpenClassRooms", 35.00, 2);
+INSERT INTO ARTICLE VALUES("SWG", "Faire un jeu vidéo avec Swing", "faire_un_jeu_video_avec_swing.png", "Pourquoi utiliser de lourdes libs quand on a déjà tout ce qu'il faut dans le JRE de base?", 47.49, 2);
 
 -- CATEGORIE : AUTRES
 INSERT INTO ARTICLE VALUES("DJV", "Augmentez la durée de vie de votre jeu vidéo", "augmentez_la_duree_de_vie_de_votre_jeu_video.png", "« Et cette souffrance des jeux à licence, vous vous en souviendrez pour toujours (...) », JdG", 66.60, 3);
