@@ -20,6 +20,7 @@ INSERT INTO ARTICLE VALUES("GDP", "Le guide du plagiarisme", "le_guide_du_plagia
 
 -- CATEGORIE : PROGRAMMATION
 INSERT INTO ARTICLE VALUES("GBP", "Le guide des « bad practices »", "le_guide_des_bad_practices.png", "Manuel pour mal programmer, par OpenClassRooms", 19.99, 2);
+INSERT INTO ARTICLE VALUES("JQY", "Concevoir votre site avec jQuery", "concevoir_votre_site_avec_jquery.png", "Abandonnez le JS Vanilla pour inclure une lib lourde et peu nécessaire, par OpenClassRooms", 24.99, 2);
 
 -- CATEGORIE : AUTRES
 INSERT INTO ARTICLE VALUES("DJV", "Augmentez la durée de vie de votre jeu vidéo", "augmentez_la_duree_de_vie_de_votre_jeu_video.png", "« Et cette souffrance des jeux à licence, vous vous en souviendrez pour toujours (...) », JdG", 66.60, 3);
