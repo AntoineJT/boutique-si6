@@ -46,7 +46,10 @@ function printBill($bdd, $commId, $clientId, $products=null){
             AND IdCli = ?
             AND COMMANDE.CodeComm = ?");
         $req->execute(array($clientId,$commId));
-        //if ($req->rowCount()) // TODO Si 0 alors afficher "Cette facture n'existe pas!";
+        if ($req->rowCount() === 0){
+            echo "Cette facture n'existe pas!";
+            return;
+        }
         $resp = $req->fetchAll(PDO::FETCH_ASSOC);
         $products = array();
         foreach($resp as $val){
