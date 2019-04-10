@@ -56,7 +56,8 @@ function printBill($bdd, $commId, $clientId, $products=null){
         $req = $bdd->prepare("SELECT DateComm,PrixTotal FROM COMMANDE WHERE CodeComm = ?");
         $req->execute(array($commId));
         $results = $req->fetch(PDO::FETCH_ASSOC);
-        $billDate = $results["DateComm"]; // TODO mettre en forme la date
+        $billDate = $results["DateComm"];
+        $billDate = substr($billDate,8,2).'/'.substr($billDate,5,2).'/'.substr($billDate,0,4);
         $total = $results["PrixTotal"];
         $req = $bdd->prepare("SELECT PseudoCli FROM CLIENT WHERE IdCli = ?");
         $req->execute(array($clientId));
