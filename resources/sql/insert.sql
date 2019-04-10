@@ -17,6 +17,7 @@ INSERT INTO ARTICLE VALUES("GDK", "Le guide du Kazoo", "le_guide_du_kazoo.jpg", 
 INSERT INTO ARTICLE VALUES("RSE", "Rentabiliser ses enfants", "rentabiliser_ses_enfants.png", "Un livre indespensable pour tout parent concerné par l'argent, par Studio Bubble Tea", 55.00, 1);
 INSERT INTO ARTICLE VALUES("GPS", "Le guide du parfait spammeur", "le_guide_du_parfait_spammeur.png", "Apprenez comment démarcher les gens en envoyant plus de 55mails/s, et connaître le succès sur YouTube, par Vincent Macario", 100.00, 1);
 INSERT INTO ARTICLE VALUES("GDP", "Le guide du plagiarisme", "le_guide_du_plagiarisme.png", "Ne vous embêtez plus à chercher des idées par vous même : apprenez à plagier les autres pour être plus productif, par Math Podcast", 35.00, 1);
+INSERT INTO ARTICLE VALUES("JDG", "Recette pour jeux pourris", "recette_pour_jeux_pourris.png", "« Cette expérience pathétique, ce jeu fait par des sadiques, demain oui je l'abandonne, sur la route de Narbonne. (...) », JdG", 17.65, 1);
 
 -- CATEGORIE : PROGRAMMATION
 INSERT INTO ARTICLE VALUES("GBP", "Le guide des « bad practices »", "le_guide_des_bad_practices.png", "Manuel pour mal programmer, par OpenClassRooms", 19.99, 2);
