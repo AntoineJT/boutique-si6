@@ -29,3 +29,4 @@ INSERT INTO ARTICLE VALUES("DBG", "Pourquoi le débuggeur est-il surcôté", "po
 INSERT INTO ARTICLE VALUES("DJV", "Augmentez la durée de vie de votre jeu vidéo", "augmentez_la_duree_de_vie_de_votre_jeu_video.png", "« Et cette souffrance des jeux à licence, vous vous en souviendrez pour toujours (...) », JdG", 66.60, 3);
 INSERT INTO ARTICLE VALUES("OCT", "Dessiner un octogone sans règle", "dessiner_un_octogone_sans_regle.png", "Le livre qui vous apprendra à vous battre dans les cours de récréation et à dessiner un octogone sans règle, par Booba & Kaaris", 57.50, 3);
 INSERT INTO ARTICLE VALUES("ABE", "Comment ne pas finir en bâtonnets de glace", "comment_ne_pas_finir_en_batonnets_de_glace.png", "Le guide de survie du Mudokon", 14.99, 3);
+INSERT INTO ARTICLE VALUES("JUL", "Le guide de l'autotune", "le_guide_de_l_autotune.png", "Un manuel vous expliquant comment trop vocoder votre voix, par Jul, un professionnel de la chose", 50.00, 3);
