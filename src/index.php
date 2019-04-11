@@ -72,7 +72,8 @@
                 "news",
                 "contact",
                 "buy",
-                "showbill"
+                "showbill",
+                "admin"
             );
 
             if (in_array($action, pages, true)){

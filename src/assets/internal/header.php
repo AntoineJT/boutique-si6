@@ -16,7 +16,7 @@
             } else {
                 ?><li><a href="/disconnect">Se déconnecter</a></li><?php
                 if ($_SESSION["b_admin"]){
-                    ?><li><a href="#" onclick="alert('WIP!')">Panel Admin</a></li><?php
+                    ?><li><a href="/admin">Panel Admin</a></li><?php
                 }
                 ?><li><a href="/showbill">Vos factures</a></li><?php
             }
