@@ -17,12 +17,15 @@
         $qte = is_numeric($_POST["qte"]) ? $qte : null;
 
         if (!is_null($prod) && !is_null($qte)){
-            if (!isset($_SESSION["products"][$prod])){
-                $_SESSION["products"][$prod] = 0;
+            if ($qte > 0){
+                if (!isset($_SESSION["products"][$prod])){
+                    $_SESSION["products"][$prod] = 0;
+                }
+                $_SESSION["products"][$prod] += $qte;
+            } else {
+                echo "<script>alert('Vous avez sélectionné une quantité invalide!');window.location = '/products'</script>";
             }
-            $_SESSION["products"][$prod] += $qte;
         }
-        header('Location: /products');
     }
 
     switch($action){
