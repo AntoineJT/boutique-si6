@@ -72,7 +72,7 @@ function printBill($bdd, $commId, $clientId, $products=null){
     }
     
     echo 
-        '<section id="bill">
+        '<section class="bill">
             <h2>Facture n°' . $commId . '</h2>
             <p>
                 <details open>
