@@ -47,9 +47,8 @@
                     $total_fac = 0;
                     foreach($_SESSION["products"] as $key => $val){
                         $req = $bdd->prepare("SELECT NomArt, PrixArt FROM ARTICLE WHERE CodeArt = ?");
-                        $req->setFetchMode(PDO::FETCH_ASSOC);
                         $req->execute(array($key));
-                        $results = $req->fetch();
+                        $results = $req->fetch(PDO::FETCH_ASSOC);
                         $price = $results["PrixArt"];
                         $total = $val*$price;
                         echo "<li><span class='underlined'>" . $results["NomArt"] . "</span> (" . $price . "€) x " . $val . " = " . $total . "€</li>";
@@ -69,7 +68,8 @@
                 "register",
                 "news",
                 "contact",
-                "buy"
+                "buy",
+                "showbill"
             );
 
             if (in_array($action, pages, true)){
